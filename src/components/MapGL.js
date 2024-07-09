@@ -27,14 +27,14 @@ export const MapGL = () => {
             setLat(map.current.getCenter().lat.toFixed(4));
             setZoom(map.current.getZoom().toFixed(2));
         })
-        return () => map.current.remove()
-    }, [])
+
+    })
 
     return (
         <div>
             <div className='sideBar'>
                 <div>
-                    Longitude: {lng} | Latitude: {lat}
+                    Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
                 </div>
             </div>
             <div className='map-container' ref={mapContainerRef} ></div>
